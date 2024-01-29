@@ -1,0 +1,75 @@
+import prisma from "@/libs/prismadb";
+import { NextResponse } from "next/server";
+
+export async function PUT(request: Request) {
+  const body = await request.json();
+
+  const {
+    id,
+    firstname,
+    lastname,
+    email,
+    phone,
+    alternatePhone,
+    gender,
+    dateOfBirth,
+    nextOfKin,
+    nextOfKinPhone,
+    state,
+    lga,
+    address,
+    netMonthlyIncome,
+    purposeOfLoan,
+    desiredLoanAmount,
+    guarantorName1,
+    guarantorPhone1,
+    guarantorName2,
+    guarantorPhone2,
+    comments,
+    businessName,
+    businessType,
+    businessPhone,
+    businessAddress,
+    businessEmail,
+    cacNumber,
+    country,
+    maritalStatus,
+    howYouHeard,
+  } = body;
+  const customer = await prisma.customer.update({
+    where: { id: id },
+    data: {
+      firstname,
+      lastname,
+      email,
+      phone,
+      alternatePhone,
+      gender,
+      dateOfBirth,
+      nextOfKin,
+      nextOfKinPhone,
+      state,
+      lga,
+      address,
+      purposeOfLoan,
+      guarantorName1,
+      guarantorPhone1,
+      guarantorName2,
+      guarantorPhone2,
+      comments,
+      businessName,
+      businessType,
+      businessPhone,
+      businessAddress,
+      businessEmail,
+      cacNumber,
+      country,
+      maritalStatus,
+      howYouHeard,
+      netMonthlyIncome: parseFloat(netMonthlyIncome),
+      desiredLoanAmount: parseFloat(desiredLoanAmount),
+    },
+  });
+
+  return NextResponse.json(customer);
+}

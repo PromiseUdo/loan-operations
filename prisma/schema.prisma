@@ -1,0 +1,234 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model Account {
+  id                 String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId             String  @db.ObjectId
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.String
+  access_token       String?  @db.String
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.String
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model User {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  username      String
+  firstname String
+  lastname String
+  email         String   @unique
+  emailVerified Boolean? @default(false)
+  emailVerificationToken String? 
+  phone String
+  hashedPassword String?
+  approved Boolean
+  createdAt  DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  role Role @default(USER)
+  accounts      Account[]
+  photograph String
+  resetPasswordToken String?
+  resetPasswordExpiry DateTime?
+}
+
+
+model Customer {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  firstname        String
+  lastname      String
+  nextOfKin String
+  nextOfKinPhone String
+  email         String
+  phone         String
+  alternatePhone  String
+  dateOfBirth   String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  customerPassport String
+  cacNumber       String?
+  businessName  String?
+  businessPhone String?
+  creditLimit Float?
+  howYouHeard String?
+  businessType String?
+  businessAddress   String?
+  businessEmail   String?
+  guarantorName1   String
+  guarantorPassport1 String
+  guarantorPhone1 String
+  guarantorName2   String?
+  guarantorPassport2 String?
+  customerIdentification String?
+  proofOfResidence String?
+  guarantorPhone2 String?
+  address       String
+  gender        String
+  maritalStatus String
+  cacDocument String?
+  netMonthlyIncome Float
+  country   Country
+  state        State
+  lga           Lga
+  purposeOfLoan String
+  desiredLoanAmount Float
+  loanAmount Float?
+  comments String?
+  role Role @default(CUSTOMER)
+  loans       Loan[]
+  payments Payment[]
+  transactions Transaction[]
+  websiteReg Boolean?
+}
+
+model Expense {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  desc String
+  amount Float
+  chequeNo String
+  notes String?
+  operator String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  expenseReceipt String?
+  vendor String?
+  approved Boolean @default(false)
+  dateApproved  DateTime?
+  category String?
+
+}
+
+model Loan {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  customerId       String @db.ObjectId
+  loanAmount    Float
+  loanCode      String?
+  monthlyPayment Float?
+  unpaid  Float?
+  paid Float?
+  interestRate  Float
+  earnedRevenue Float?
+  interestRevenue Float?
+  repaymentPlan String?
+  mgmtFee Float
+  advisoryFee Float
+  legalFee Float
+  insuranceFee Float
+  lateFees Float?
+  notes String?
+  numberOfPeriods Int
+  paidPeriods Int? @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  approvalStatus Boolean
+  dateApproved DateTime?
+  clearedStatus Boolean? @default(false)
+  dateCleared DateTime?
+  payments  Payment[]
+  customer Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  loanId        String @db.ObjectId
+  customerId       String? @db.ObjectId
+  loan Loan @relation(fields: [loanId], references: [id], onDelete: Cascade)
+  amount    Float
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  actualPaymentDate DateTime?
+  nextPaymentDate DateTime?
+  active Boolean?  @default(false)
+  lateFee     Float?
+  interestRevenue Float?
+  operator String?
+  flagged Boolean? @default(false)
+  notes String?
+  Status PaymentStatus @default(PENDING)
+  customer Customer? @relation(fields: [customerId], references: [id], onDelete: Cascade)
+
+}
+
+model Transaction {
+    id            String  @id @default(auto()) @map("_id") @db.ObjectId
+    customerId    String? @db.ObjectId
+    customer Customer? @relation(fields: [customerId], references: [id], onDelete: Cascade)
+    amount    Float?
+    otherCharges Float?
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+    operator String?
+    type TransactionType
+}
+
+
+type Country {
+  label String
+  value String
+}
+
+type State {
+  label String
+  value String
+}
+
+type Lga {
+  label String
+  value Int
+}
+
+
+
+
+ enum Role {
+    USER
+    ADMIN
+    CUSTOMER
+ }
+
+ enum ApprovalStatus {
+  PENDING
+  APPROVED
+  DENIED
+ }
+
+ enum PaymentStatus {
+  PENDING
+  COMPLETED
+ }
+
+ enum TransactionType {
+    PAYMENT
+    LOAN
+    LOANAPPROVAL
+    MGMTFEE
+    ADVISORYFEE
+    LEGALFEE
+    INSURANCEFEE
+    CLEAREDLOAN
+    RECONCILEPAYMENT
+    ACCOUNTAPPROVAL
+    CREATEEXPENSE
+    UPDATEEXPENSE
+    EXPENSEAPPROVAL
+    EDITLOAN
+
+ }
