@@ -157,7 +157,7 @@ const NewAccountForm: React.FC<NewAccountFormProps> = ({ currentUser }) => {
           const fileName =
             new Date().getTime() + "-" + data.customerPassport.name;
           const storage = getStorage(firebaseApp);
-          const storageRef = ref(storage, `customer/${fileName}`);
+          const storageRef = ref(storage, `clients/${fileName}`);
           const uploadTask = uploadBytesResumable(
             storageRef,
             data.customerPassport

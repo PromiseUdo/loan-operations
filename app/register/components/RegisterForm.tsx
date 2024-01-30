@@ -98,7 +98,7 @@ const RegisterForm = () => {
         if (data.photograph) {
           const fileName = new Date().getTime() + "-" + data.photograph.name;
           const storage = getStorage(firebaseApp);
-          const storageRef = ref(storage, `profilepic/${fileName}`);
+          const storageRef = ref(storage, `profilephoto/${fileName}`);
           const uploadTask = uploadBytesResumable(storageRef, data.photograph);
 
           await new Promise<void>((resolve, reject) => {
@@ -476,17 +476,19 @@ const RegisterForm = () => {
 
         {!currentUser ? (
           <div className="w-full flex justify-between py-8  items-center">
-            <button
-              onClick={() => {
-                setCurrentStep((prev) => prev - 1);
-              }}
-              className={clsx(
-                "text-center rounded-md bg-slate-500 text-[#f7f7f7] hover:bg-gray-700 text-gray-100 font-medium px-8 py-2",
-                (currentStep === 1 || complete) && "invisible"
-              )}
-            >
-              Go Back
-            </button>
+            {!isUserCreated && (
+              <button
+                onClick={() => {
+                  setCurrentStep((prev) => prev - 1);
+                }}
+                className={clsx(
+                  "text-center rounded-md bg-slate-500 text-[#f7f7f7] hover:bg-gray-700 text-gray-100 font-medium px-8 py-2",
+                  (currentStep === 1 || complete) && "invisible"
+                )}
+              >
+                Go Back
+              </button>
+            )}
 
             {!complete && currentStep < 3 && (
               <button
@@ -495,16 +497,19 @@ const RegisterForm = () => {
                     ? setComplete(true)
                     : setCurrentStep((prev) => prev + 1);
                 }}
-                className="text-center rounded-md text-[#f7f7f7] bg-graydark hover:bg-gray-700 text-gray-100 font-medium px-8 py-2"
+                className="self-end text-center rounded-md text-[#f7f7f7] bg-graydark hover:bg-gray-700 text-gray-100 font-medium px-8 py-2"
               >
                 {/* <span>{currentStep === steps.length ? "Finish" : "Next"}</span> */}
                 <span>Next</span>
               </button>
             )}
-            {!complete && currentStep === 3 && (
+            {!complete && currentStep === 3 && !isUserCreated && (
               <button
                 onClick={handleSubmit(onSubmit)}
-                className="text-center rounded-md bg-green-600 hover:bg-gray-700 text-[#f7f7f7] font-medium px-8 py-2"
+                className={clsx(
+                  "text-center rounded-md bg-green-600 hover:bg-gray-700 text-[#f7f7f7] font-medium px-8 py-2",
+                  isUserCreated && "invisible"
+                )}
               >
                 <span>
                   {isLoading && !currentUser ? "Loading..." : "Finish"}
