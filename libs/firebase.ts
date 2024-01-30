@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCY5JES-8d08cOhSMo0_xRNwrG0ykLVJBA",
-  authDomain: "loanops-ec9c2.firebaseapp.com",
+  authDomain: "shopday-ng-41455.firebaseapp.com",
   projectId: "loanops-ec9c2",
   storageBucket: "loanops-ec9c2.appspot.com",
   messagingSenderId: "412588104740",
