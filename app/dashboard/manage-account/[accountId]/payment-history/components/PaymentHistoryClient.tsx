@@ -168,9 +168,7 @@ const PaymentHistoryClient: React.FC<PaymentHistoryClientProps> = ({
   const handleFlagPayment = useCallback((id: string, flagged: boolean) => {
     toast("Changing payment flagged status. Please wait...");
     const emailData = {
-      emailList: [
-        "jini@goldpayinvestment.com, ojimmy@goldpayinvestment.com, niderima@goldpayinvestment.com",
-      ],
+      emailList: ["info.promiseudo@gmail.com"],
       subject: `Payment Reconciliation`,
       message: `Hello, <br/>A payment error has been recorded for ${customer?.firstname} ${customer?.lastname} and needs your attention for correction. <br/> <br/> You can view the payment history for the customer here: <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/manage-account/${customer?.id}/payment-history">Loan Payment History for ${customer?.firstname} ${customer?.lastname}</a><br/>
       <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,

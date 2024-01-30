@@ -197,9 +197,7 @@ const AllExpensesClient: React.FC<AllExpensesClientProps> = ({
       }
       toast("Approving Expense. Please wait...");
       const emailData = {
-        emailList: [
-          "ojimmy@goldpayinvestment.com, niderima@goldpayinvestment.com",
-        ],
+        emailList: ["info.promiseudo@gmail.com"],
         subject: `Expense Approval`,
         message: `Hello, <br/>Expense record for ${desc} at ${formatPrice(
           amount

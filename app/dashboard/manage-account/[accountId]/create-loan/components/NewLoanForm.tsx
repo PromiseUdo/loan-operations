@@ -91,9 +91,7 @@ const NewLoanForm: React.FC<CustomerAccountProps> = ({
     };
 
     const emailData = {
-      emailList: [
-        "jini@goldpayinvestment.com, ojimmy@goldpayinvestment.com, niderima@goldpayinvestment.com",
-      ],
+      emailList: ["info.promiseudo@gmail.com"],
       subject: `New Loan Created`,
       message: `Hello, <br/>Loan application for ${customer?.firstname} ${customer?.lastname} has been successfully created and requires your approval for further actions. <br/> <br/> Go to <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/manage-account/${customer?.id}/approve-loan">Manage Loans</a> to approve this customer's loan.
       <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,

@@ -108,9 +108,7 @@ const MakePaymentForm: React.FC<MakePaymentProps> = ({
       type: "PAYMENT",
     };
     const emailData = {
-      emailList: [
-        "jini@goldpayinvestment.com, ojimmy@goldpayinvestment.com, niderima@goldpayinvestment.com",
-      ],
+      emailList: ["info.promiseudo@gmail.com"],
       subject: `New Payment`,
       message: `New loan payment recorded for ${customer?.firstname} ${
         customer?.lastname

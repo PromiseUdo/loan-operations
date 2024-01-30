@@ -145,9 +145,7 @@ const NewExpenseForm: React.FC<CustomerAccountProps> = ({ currentUser }) => {
       approved: false,
     };
     const emailData = {
-      emailList: [
-        "jini@goldpayinvestment.com, ojimmy@goldpayinvestment.com, niderima@goldpayinvestment.com",
-      ],
+      emailList: ["info.promiseudo@gmail.com"],
       subject: `New Expenses Recorded`,
       message: `Hello, <br/>A new expense has been recorded for ${data?.desc} <br/> <br/> Go to <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/expenses/unapproved-expenses">Unapproved Expenses</a> to approve this expense.
       <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,
