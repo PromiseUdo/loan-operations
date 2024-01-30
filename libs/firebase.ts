@@ -7,8 +7,8 @@ import { initializeApp } from "firebase/app";
 const firebaseConfig = {
   apiKey: "AIzaSyCY5JES-8d08cOhSMo0_xRNwrG0ykLVJBA",
   authDomain: "shopday-ng-41455.firebaseapp.com",
-  projectId: "loanops-ec9c2",
-  storageBucket: "loanops-ec9c2.appspot.com",
+  projectId: "goldpay-1f78d",
+  storageBucket: "shopday-ng-41455.appspot.com",
   messagingSenderId: "412588104740",
   appId: "1:412588104740:web:ba633678534ced9db40cb1",
 };
