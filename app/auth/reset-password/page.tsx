@@ -6,8 +6,8 @@ import FormWrap from "@/app/components/FormWrap";
 import ChangePasswordForm from "@/app/components/auth/ChangePasswordForm";
 
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Login",
-  description: "This is the login page for Goldpay Operations application",
+  title: "Loanpay Operations - Login",
+  description: "This is the login page for Loanpay Operations application",
 };
 
 interface ResetPasswordPageProps {

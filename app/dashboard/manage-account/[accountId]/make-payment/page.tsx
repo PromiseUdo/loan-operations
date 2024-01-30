@@ -10,7 +10,7 @@ import getLoansByCustomerId from "@/actions/getLoansByCustomerId";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import Link from "next/link";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - New Payment",
+  title: "Loanpay Operations - New Payment",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

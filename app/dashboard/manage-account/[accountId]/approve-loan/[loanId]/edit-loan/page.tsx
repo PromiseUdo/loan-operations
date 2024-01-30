@@ -10,7 +10,7 @@ import AccountSummary from "./components/AccountSummary";
 import getLoanById from "@/actions/getLoanById";
 import Link from "next/link";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Edit Loan",
+  title: "Loanpay Operations - Edit Loan",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

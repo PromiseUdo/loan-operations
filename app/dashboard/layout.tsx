@@ -7,8 +7,8 @@ import Sidebar from "@/components/Sidebar";
 import Loader from "@/components/common/Loader";
 
 export const metadata = {
-  title: "Goldpay Operations",
-  description: "Goldpay Ops Dashboard",
+  title: "Loanpay Operations",
+  description: "Loanpay Ops Dashboard",
 };
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (

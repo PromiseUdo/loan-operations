@@ -238,7 +238,7 @@ const Sidebar = () => {
                       fill=""
                     />
                   </svg>
-                  New Applications
+                  Online Applications
                 </Link>
               </li>
               <li>

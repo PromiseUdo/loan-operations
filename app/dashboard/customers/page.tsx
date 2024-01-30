@@ -7,7 +7,7 @@ import { getCurrentUser } from "@/actions/getCurrentUser";
 import getPayments from "@/actions/getPayments";
 import getLoans from "@/actions/getLoans";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Customers",
+  title: "Loanpay Operations - Customers",
   description: "All customers page",
   // other metadata
 };

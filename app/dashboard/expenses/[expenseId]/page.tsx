@@ -10,7 +10,7 @@ import { SafeUser } from "@/types/user";
 import ViewExpenseClient from "./components/ViewExpenseClient";
 import getExpenseById from "@/actions/getExpenseById";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Manage Accounts",
+  title: "Loanpay Operations - Manage Accounts",
   description: "Manage Accounts page",
   // other metadata
 };

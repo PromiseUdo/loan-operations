@@ -11,7 +11,7 @@ import getLoans from "@/actions/getLoans";
 import { v4 as uuidv4 } from "uuid";
 
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Approved Expenses",
+  title: "Loanpay Operations - Approved Expenses",
   description: "This is the all expenses page",
   // other metadata
 };

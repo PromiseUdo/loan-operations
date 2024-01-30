@@ -12,7 +12,7 @@ import getRevenueToday from "@/actions/getRevenueToday";
 import getRevenueForYear from "@/actions/getRevenueForYear";
 
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Approved Expenses",
+  title: "Loanpay Operations - Approved Expenses",
   description: "This is the all expenses page",
   // other metadata
 };

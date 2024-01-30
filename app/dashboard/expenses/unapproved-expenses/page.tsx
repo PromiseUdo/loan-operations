@@ -6,7 +6,7 @@ import { getCurrentUser } from "@/actions/getCurrentUser";
 import getExpenses from "@/actions/getExpenses";
 import AllExpensesClient from "./components/UnapprovedExpensesClient";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Unapproved Expenses",
+  title: "Loanpay Operations - Unapproved Expenses",
   description: "This is the unapproved expenses page",
   // other metadata
 };

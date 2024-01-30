@@ -14,7 +14,7 @@ import getExpenseById from "@/actions/getExpenseById";
 import EditExpenseForm from "./components/EditExpenseClient";
 import getExpensesForMonth from "@/actions/getExpensesForMonth";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Edit Payment",
+  title: "Loanpay Operations - Edit Payment",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

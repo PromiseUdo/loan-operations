@@ -7,8 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Login",
-  description: "This is the login page for Goldpay Operations application",
+  title: "Loanpay Operations - Login",
+  description: "This is the login page for Loanpay Operations application",
 };
 
 interface VerifyEmailPageProps {

@@ -9,7 +9,7 @@ import ManageCustomerClient from "./components/ManageCustomerClient";
 import getLoansByCustomerId from "@/actions/getLoansByCustomerId";
 import { SafeUser } from "@/types/user";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Manage Accounts",
+  title: "Loanpay Operations - Manage Accounts",
   description: "Manage Accounts page",
   // other metadata
 };

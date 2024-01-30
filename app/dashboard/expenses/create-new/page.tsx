@@ -6,7 +6,7 @@ import ExpenseSummary from "./components/ExpenseSummary";
 import NewExpenseForm from "./components/NewExpenseForm";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - New Expense",
+  title: "Loanpay Operations - New Expense",
   description: "Create New Expense page",
   // other metadata
 };

@@ -13,7 +13,7 @@ import getRevenueToday from "@/actions/getRevenueToday";
 import getRevenueForMonth from "@/actions/getRevenueForMonth";
 import getRevenueForYear from "@/actions/getRevenueForYear";
 export const metadata: Metadata = {
-  title: "Goldpay Operations - Financial Overview",
+  title: "Loanpay Operations - Financial Overview",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };
