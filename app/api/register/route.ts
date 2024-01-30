@@ -44,7 +44,7 @@ export async function POST(request: Request) {
   });
 
   const emailVerificationToken = crypto.randomBytes(32).toString("base64url");
-  const message = `<h1>Verify email for <b>${email}</b>.</h1> <p>To verify your email click on this link: <a href="https://goldpay-operations.vercel.app/auth/verify-email?token=${emailVerificationToken}">Click here to verify your email</a></p>`;
+  const message = `<h1>Verify email for <b>${email}</b>.</h1> <p>To verify your email click on this link: <a href="https://loan-operations.vercel.app/auth/verify-email?token=${emailVerificationToken}">Click here to verify your email</a></p>`;
   await prisma.user.update({
     where: {
       id: user.id,

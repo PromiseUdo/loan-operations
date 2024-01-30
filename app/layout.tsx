@@ -5,7 +5,7 @@ import "../utils/services/reminderScheduler";
 // import "./satoshi.css";
 export const metadata: Metadata = {
   title: "Loanpay Operations",
-  description: "Manage operations at Goldpay Investment Limited",
+  description: "Manage operations at Loanpay Investment Limited",
   icons: {
     icon: "/favicon.png",
   },

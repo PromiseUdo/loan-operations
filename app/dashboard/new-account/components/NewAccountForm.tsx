@@ -458,8 +458,8 @@ const NewAccountForm: React.FC<NewAccountFormProps> = ({ currentUser }) => {
     const emailData = {
       emailList: ["info.promiseudo@gmail.com"],
       subject: `New Account Registration`,
-      message: `Hello, <br/>A new account has just been created for ${data?.firstname} ${data?.lastname}  <br/>Go to <a href="https://goldpay-operations.vercel.app/dashboard/customers" target="_blank">Manage Accounts</a> to start managing this customer's records.
-      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,
+      message: `Hello, <br/>A new account has just been created for ${data?.firstname} ${data?.lastname}  <br/>Go to <a href="https://loan-operations.vercel.app/dashboard/customers" target="_blank">Manage Accounts</a> to start managing this customer's records.
+      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Loanpay App</small>`,
     };
 
     axios

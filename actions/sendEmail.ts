@@ -14,7 +14,7 @@ export async function sendMail(
   });
 
   const mailOptions = {
-    from: `Goldpay <${process.env.EMAIL}>`,
+    from: `Loanpay <${process.env.EMAIL}>`,
     to: Array.isArray(to) ? to.join(", ") : to,
     subject: subject,
     html: message,

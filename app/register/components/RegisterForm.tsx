@@ -247,8 +247,8 @@ const RegisterForm = () => {
       <div className="w-full flex flex-col items-center justify-center gap-3">
         <div className="relative w-20 h-20 aspect-square">
           <Image
-            src="/images/logo.png"
-            alt="goldpay logo"
+            src="/defaultImage.png"
+            alt="loanpay logo"
             className="object-contain cursor-pointer"
             onClick={() => router.push("/")}
             fill

@@ -38,11 +38,11 @@ schedule.scheduleJob("0 25 11 * * *", async () => {
         });
 
         if (customer && customer.phone) {
-          const message = `Friendly reminder: Your loan repayment is due on ${formattedDate}. Goldpay Investment`;
+          const message = `Friendly reminder: Your loan repayment is due on ${formattedDate}. Loanpay Investment`;
 
           await axios.post("https://api.ng.termii.com/api/sms/send", {
             to: `+234${customer.phone.substring(1)}`,
-            from: "Goldpay",
+            from: "Loanpay",
             sms: message,
             type: "plain",
             api_key: process.env.TERMII_KEY,

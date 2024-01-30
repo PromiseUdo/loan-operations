@@ -201,10 +201,10 @@ const AllExpensesClient: React.FC<AllExpensesClientProps> = ({
         subject: `Expense Approval`,
         message: `Hello, <br/>Expense record for ${desc} at ${formatPrice(
           amount
-        )} has been approved by admin.<br/> <br/>: <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/expenses/all/this-month">See all expenses this month</a><br/>
+        )} has been approved by admin.<br/> <br/>: <a target="_blank" href="https://loan-operations.vercel.app/dashboard/expenses/all/this-month">See all expenses this month</a><br/>
         <br/>Operator: ${currentUser?.firstname} ${
           currentUser?.lastname
-        } <br/><br/><small>Goldpay Investment Operations App</small>`,
+        } <br/><br/><small>Loanpay App</small>`,
       };
       const transactionData = {
         // customerId: customer?.id,

@@ -369,8 +369,8 @@ const ApproveLoanClient: React.FC<ApproveLoanClientProps> = ({
         emailList: ["info.promiseudo@gmail.com"],
         subject: `Loan Approval`,
         message: `Hello, <br/>Loan application of ${customer?.firstname} ${customer?.lastname} has been approved by admin. <br/> <br/> You can start recording payments. <br/>
-        <br/> <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/manage-account/${customer?.id}/make-payment">Record New Payment from ${customer?.firstname} ${customer?.lastname}</a> <br/>
-        <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,
+        <br/> <a target="_blank" href="https://loan-operations.vercel.app/dashboard/manage-account/${customer?.id}/make-payment">Record New Payment from ${customer?.firstname} ${customer?.lastname}</a> <br/>
+        <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Loanpay App</small>`,
       };
 
       if (currentUser?.role !== "ADMIN") {
@@ -442,7 +442,7 @@ const ApproveLoanClient: React.FC<ApproveLoanClientProps> = ({
       emailList: ["info.promiseudo@gmail.com"],
       subject: `Loan Cleared`,
       message: `Hello, <br/>Loan repayments of ${customer?.firstname} ${customer?.lastname} has been  marked as cleared by admin. <br/> 
-      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,
+      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Loanpay App</small>`,
     };
 
     const transactionData = {

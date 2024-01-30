@@ -88,7 +88,7 @@ const EditLoanClient: React.FC<CustomerAccountProps> = ({
       emailList: ["info.promiseudo@gmail.com"],
       subject: `New Loan Created`,
       message: `Hello, <br/>Loan application for ${customer?.firstname} ${customer?.lastname} has been successfully edited. <br/>
-      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Goldpay Investment Operations App</small>`,
+      <br/>Operator: ${currentUser?.firstname} ${currentUser?.lastname} <br/><br/><small>Loanpay App</small>`,
     };
 
     const transactionData = {

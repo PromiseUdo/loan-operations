@@ -116,7 +116,7 @@ const MakePaymentForm: React.FC<MakePaymentProps> = ({
         data.amount
       )}. <br/>Operator: ${currentUser?.firstname} ${
         currentUser?.lastname
-      } <br/><br/><small>Goldpay Investment Operations App</small>`,
+      } <br/><br/><small>Loanpay App</small>`,
     };
 
     // `Dear Sir, please kindly review and approve customer's payment. Click on the link below <br/> <a target="_blank" href="https://goldpay-operations.vercel.app/dashboard/manage-account/${customerId}/payment-history">Payment list</a> <br/>Goldpay Investment Operations`,

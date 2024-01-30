@@ -16,7 +16,7 @@ export const resetPassword = async (email: string) => {
   const resetPasswordToken = crypto.randomBytes(32).toString("base64url");
   const today = new Date();
   const expiryDate = new Date(today.setDate(today.getDate() + 1));
-  const message = `<h1>Reset password for <b>${email}</b>.</h1> <p>To reset your password, click on this link and follow the instructions: <a href="https://goldpay-operations.vercel.app/auth/reset-password?token=${resetPasswordToken}">Click here to reset password</a></p>`;
+  const message = `<h1>Reset password for <b>${email}</b>.</h1> <p>To reset your password, click on this link and follow the instructions: <a href="https://loan-operations.vercel.app/auth/reset-password?token=${resetPasswordToken}">Click here to reset password</a></p>`;
 
   await prisma.user.update({
     where: {
