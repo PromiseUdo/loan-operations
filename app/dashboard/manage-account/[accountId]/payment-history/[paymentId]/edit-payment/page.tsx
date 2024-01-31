@@ -11,7 +11,7 @@ import EditPaymentForm from "./components/EditPaymentForm";
 import AccountSummary from "../../../make-payment/components/AccountSummary";
 import getPaymentByLoanId from "@/actions/getPaymentByLoanId";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Edit payment",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

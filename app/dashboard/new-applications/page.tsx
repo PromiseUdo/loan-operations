@@ -5,7 +5,7 @@ import getCustomers from "@/actions/getCustomers";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import NewCustomersClient from "./components/NewCustomersClient";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Online applications",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

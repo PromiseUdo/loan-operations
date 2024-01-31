@@ -8,7 +8,7 @@ import getCustomerById from "@/actions/getCustomerById";
 import PaymentHistoryClient from "./components/PaymentHistoryClient";
 import getPaymentHistoryByLoanId from "@/actions/getPaymentHistoryByLoanId";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Payment history",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

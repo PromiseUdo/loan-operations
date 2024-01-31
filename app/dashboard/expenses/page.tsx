@@ -8,7 +8,7 @@ import getExpensesToday from "@/actions/getExpensesToday";
 import getExpensesForMonth from "@/actions/getExpensesForMonth";
 import getExpensesForYear from "@/actions/getExpensesForYear";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Expenses",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

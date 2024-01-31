@@ -40,7 +40,7 @@ export default async function page({ searchParams }: VerifyEmailPageProps) {
     return (
       <FormWrap>
         <div className=" w-full  flex-col items-center flex gap-4 justify-center  ">
-          <Image src="/images/logo.png" alt="logo" height={100} width={100} />
+          <Image src="/defaultImage.png" alt="logo" height={100} width={100} />
           <hr className=" bg-slate-300 w-64 h-px" />
           <Image src="/success.svg" alt="logo" height={64} width={64} />
 

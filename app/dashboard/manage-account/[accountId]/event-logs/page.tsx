@@ -8,7 +8,7 @@ import getCustomerById from "@/actions/getCustomerById";
 import EventLogsClient from "./components/EventLogsClient";
 import getTransactionsByCustomerId from "@/actions/getTransactionsByCustomerId";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loan pay - Event logs",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

@@ -77,7 +77,7 @@ const ResetPasswordForm = ({
   return (
     <>
       <div className=" flex flex-col items-center justify-center gap-6">
-        <Image src="/images/logo.png" alt="logo" height={100} width={100} />
+        <Image src="/defaultImage.png" alt="logo" height={100} width={100} />
         <Heading title="Change Password" />
       </div>
 

@@ -9,7 +9,7 @@ import getCustomerById from "@/actions/getCustomerById";
 import getLoansByCustomerId from "@/actions/getLoansByCustomerId";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Create loan",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

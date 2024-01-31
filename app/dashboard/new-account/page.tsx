@@ -6,7 +6,7 @@ import NewAccountForm from "./components/NewAccountForm";
 import FormWrap from "@/app/components/FormWrap";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - New account",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };

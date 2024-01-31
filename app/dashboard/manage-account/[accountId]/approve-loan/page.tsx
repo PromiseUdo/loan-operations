@@ -7,7 +7,7 @@ import ApproveLoanClient from "./components/ApproveLoanClient";
 import getLoansByCustomerId from "@/actions/getLoansByCustomerId";
 import getCustomerById from "@/actions/getCustomerById";
 export const metadata: Metadata = {
-  title: "Profile Page | Next.js E-commerce Dashboard Template",
+  title: "Loanpay - Approve loan",
   description: "This is Profile page for TailAdmin Next.js",
   // other metadata
 };
