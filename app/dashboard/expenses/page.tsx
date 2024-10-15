@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   // other metadata
 };
 
+async function fetchExpenses() {
+  const productsResponse = await fetch("http://localhost:9000/products", {
+    cache: "force-cache", //SSG getStaticSideProps
+    // cache:"no-store", //get server side props
+    next: {
+      revalidate: 30,
+    },
+  });
+}
+
 const page = async () => {
   const websiteReg = false;
   const approved = true;
