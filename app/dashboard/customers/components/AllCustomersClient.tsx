@@ -47,6 +47,7 @@ const AllCustomersClient: React.FC<AllCustomersClientProps> = ({
         gender: customer.gender,
         email: customer.email,
         phone: customer.phone,
+        nin: customer.nin,
         alternatePhone: customer.alternatePhone,
         nextOfKin: customer.nextOfKin,
         nextOfKinPhone: customer.nextOfKinPhone,
@@ -111,6 +112,11 @@ const AllCustomersClient: React.FC<AllCustomersClientProps> = ({
     {
       field: "phone",
       headerName: "Phone",
+      width: 120,
+    },
+    {
+      field: "nin",
+      headerName: "NIN",
       width: 120,
     },
     {

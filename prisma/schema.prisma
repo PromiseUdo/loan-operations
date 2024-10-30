@@ -81,6 +81,7 @@ model Customer {
   proofOfResidence String?
   guarantorPhone2 String?
   address       String
+  nin       String?
   gender        String
   maritalStatus String
   cacDocument String?
